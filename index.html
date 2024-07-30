@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+</head>
+
+<body>
+    <div class="page">
+        <div class="sidebar">
+            <div class="sidebar-brand">
+                <img class="brand-logo" src="images/brand-logo.svg" alt="logo">
+                <h1 class="brand-name">Dashboard</h1>
+            </div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li><a href="#" class="nav-link"><span class="material-symbols-outlined">
+                                home
+                            </span>Home</a></li>
+                    <li><a href="#" class="nav-link"><span class="material-symbols-outlined">
+                                person </span>Profile</a></li>
+                    <li><a href="#" class="nav-link"><span class="material-symbols-outlined">
+                                message </span>Messages</a></li>
+                    <li><a href="#" class="nav-link"><span class="material-symbols-outlined">
+                                history </span>History</a></li>
+                    <li><a href="#" class="nav-link"><span class="material-symbols-outlined">
+                                note_stack </span>Tasks</a></li>
+                    <li><a href="#" class="nav-link"><span class="material-symbols-outlined">
+                                groups </span>Communities</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#" class="nav-link"><span class="material-symbols-outlined">
+                                settings </span>Settings</a></li>
+                    <li><a href="#" class="nav-link"><span class="material-symbols-outlined">
+                                help </span>Support</a></li>
+                    <li><a href="#" class="nav-link"><span class="material-symbols-outlined">
+                                security </span>Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header">
+            <div class="search-bar">
+                <span class="material-symbols-outlined"> search </span>
+                <input type="text" placeholder="Search">
+            </div>
+
+            <div class="profile-settings">
+                <div class="notification">
+                    <a href="#"><span class="material-symbols-outlined"> notifications </span></a>
+                </div>
+                <div class="profile-pic">
+                    <a href="#"><img src="images/pfp-2.png" alt="avatar"></a>
+                </div>
+                <span class="name">Morgan Oakley</span>
+            </div>
+
+            <div class="navbar">
+                <div class="introduction">
+                    <div class="profile-pic">
+                        <img src="images/pfp-2.png" alt="avatar">
+                    </div>
+                    <div class="profile-info">
+                        <p class="greeting">Hi there,</p>
+                        <p class="name">Morgan Oakley (<span class="current-user">@morgan</span>)</p>
+                    </div>
+                </div>
+
+                <div class="navbar-buttons">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="projects-container">
+                <h1>Your Projects</h1>
+                <div class="projects">
+                    <div class="card">
+                        <h2>Super cool project</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <ul>
+                            <li>• Nulla facilisi.</li>
+                            <li>• Vel eros nulla tellus auctor augue.</li>
+                        </ul>
+                        </p>
+                        <nav class="card-icons">
+                            <ul>
+                                <li><a href="#"><span class="material-symbols-outlined"> star </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> visibility </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> share </span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="card">
+                        <h2>Less cool project</h2>
+                        <p class="description">Cras cursus ultricies libero. Orci varius natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus mus. Suspendisse non auctor turpis. Vivamus ligulauet
+                            tristique vel neque nec, eleifend lobortis nulla. Aliquam erat volutpat. In vitae iaculis
+                            leo. Quisque id egestas diam, sit amet accumsan dolor.</p>
+                        <nav class="card-icons">
+                            <ul>
+                                <li><a href="#"><span class="material-symbols-outlined"> star </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> visibility </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> share </span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="card">
+                        <h2>Impossible app</h2>
+                        <p class="description">Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt
+                            neque.
+                        </p>
+                        <nav class="card-icons">
+                            <ul>
+                                <li><a href="#"><span class="material-symbols-outlined"> star </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> visibility </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> share </span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="card">
+                        <h2>Easy Peasy App</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit
+                            nisi sed sollicitudin pellentesque.</p>
+                        <nav class="card-icons">
+                            <ul>
+                                <li><a href="#"><span class="material-symbols-outlined"> star </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> visibility </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> share </span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="card">
+                        <h2>Ad Blocker</h2>
+                        <p class="description">Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl
+                            vitae volutpat.</p>
+                        <nav class="card-icons">
+                            <ul>
+                                <li><a href="#"><span class="material-symbols-outlined"> star </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> visibility </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> share </span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="card">
+                        <h2>Money Maker</h2>
+                        <p class="description">Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla
+                            consectetur id nec massa.</p>
+                        <nav class="card-icons">
+                            <ul>
+                                <li><a href="#"><span class="material-symbols-outlined"> star </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> visibility </span></a></li>
+                                <li><a href="#"><span class="material-symbols-outlined"> share </span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="announcements-container">
+                <h1>Announcements</h1>
+                <div class="announcements card">
+                    <article class="post">
+                        <h2>Site maintenance</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </article>
+                    <div class="break"></div>
+                    <article class="post">
+                        <h2>Community Share Day</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </article>
+                    <div class="break"></div>
+                    <article class="post">
+                        <h2>Updated privacy policy</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="trending-container">
+                <h1>Trending</h1>
+                <div class="trendings card">
+                    <div class="trend">
+                        <div class="profile-pic">
+                            <a href="#"><img src="images/pfp-1.png" alt="avatar"></a>
+                        </div>
+                        <div class="trend-content">
+                            <p class="username">@tegan</p>
+                            <p class="description">World Peace Builder</p>
+                        </div>
+                    </div>
+
+                    <div class="trend">
+                        <div class="profile-pic">
+                            <a href="#"><img src="images/pfp-2.png" alt="avatar"></a>
+                        </div>
+                        <div class="trend-content">
+                            <p class="username">@morgan</p>
+                            <p class="description">Super Cool
+                                Project</p>
+                        </div>
+                    </div>
+
+                    <div class="trend">
+                        <div class="profile-pic">
+                            <a href="#"><img src="images/pfp-3.png" alt="avatar"></a>
+                        </div>
+                        <div class="trend-content">
+                            <span class="username">@kendall</span>
+                            <p class="description">Life Changing App</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray: #EAEDF0;
+    --color-dark-gray: #e5e7eb;
+    --color-sidebar-bg: #41424d;
+    --color-sidebar-link: #e2e8f0;
+    --color-button-bg: #3b82f6;
+    --color-card-border: #3b82f6;
+    --color-announcements-border: #eab308;
+    --color-trending-border: #15803d;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    background: var(--color-gray);
+}
+
+body {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main-content";
+    min-height: 100vh;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: var(--color-sidebar-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+}
+
+.brand-logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+    filter: invert(1);
+}
+
+.brand-name {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    height: 100%;
+}
+
+.sidebar-menu li span {
+    margin-right: 1.5rem;
+    font-size: 3rem;
+    color: #e2e8f0;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    color: var(--color-sidebar-link);
+    font-size: 1.8rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.nav-link:hover {
+    background: var(--color-button-bg);
+    opacity: 1;
+    transition: 0.3s ease;
+}
+
+.header {
+    grid-area: header;
+    background: var(--color-white);
+    display: grid;
+    grid-template-columns: 2fr auto;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:
+        "search profile"
+        "navbar navbar";
+    padding: 2rem 4rem;
+    row-gap: 2rem;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    grid-area: search;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding-right: 5rem;
+}
+
+.search-bar span {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    background: var(--color-dark-gray);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+
+.profile-settings {
+    grid-area: profile;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-settings span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.navbar {
+    grid-area: navbar;
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.introduction {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "profile-pic profile-name";
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-info {
+    font-weight: 700;
+}
+
+.profile-info .name {
+    font-size: 2.2rem;
+}
+
+.introduction .profile-pic {
+    grid-area: profile-pic;
+    width: 70px;
+    height: 70px;
+}
+
+.profile-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid #030712;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-buttons button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: var(--color-button-bg);
+    color: var(--color-white);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.main-content {
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+        "projects announcements"
+        "projects trending";
+    gap: 2.5rem;
+    padding: 2.5rem 4rem;
+}
+
+.main-content h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    background: var(--color-white);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-left: 10px solid var(--color-card-border);
+    padding: 3rem;
+}
+
+.projects-container {
+    grid-area: projects;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 3rem;
+}
+
+.projects .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card .description {
+    /* flex: 1; */
+    margin-bottom: auto;
+    display: -webkit-box;
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-icons span {
+    color: #000;
+}
+
+.card-icons ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.card-icons li:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.announcements-container {
+    grid-area: announcements;
+}
+
+.announcements-container .card {
+    border-left: 10px solid var(--color-announcements-border);
+}
+
+.announcements {
+    display: grid;
+    gap: 1rem;
+}
+
+.announcements .post {
+    width: 25ch;
+}
+
+.post h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.post .description {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 1.3rem;
+}
+
+.announcements .break {
+    border: 1px solid gray;
+}
+
+.trending-container {
+    grid-area: trending;
+}
+
+.trending-container .card {
+    border-left: 10px solid var(--color-trending-border);
+}
+
+.trendings {
+    display: grid;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.trendings .trend {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 25ch;
+}
+
+.trend .profile-pic {
+    flex-shrink: 0;
+}
